@@ -8,6 +8,7 @@ meme_dict = {
             "AGGRO": "ponerse agersivo/enojado",
             "SMH": "expresa desaprobación",
             "OMG": "shock o impresión sobre algo",
+            "TBT": "Jueves de vuelta al pasado (Throwback Thursday)",
 }
 word = input("Escribe una palabra que no entiendas (¡en mayúsculas!): ")
 
