@@ -1,0 +1,16 @@
+meme_dict = { 
+            "CRINGE": "algo raro o embarazoso",
+            "LMAO": "algo que da demasiada risa",
+            "SHEESH": "ligera desaprobación",
+            "CREEPY": "aterrador, siniestro",
+            "ROFL": "una respuesta a una broma",
+            "AGGRO": "ponerse agersivo/enojado",
+            "SMH": "expresa desaprobación",
+            "OMG": "shock o impresión sobre algo",
+}
+word = input("Escribe una palabra que no entiendas (¡en mayúsculas!): ")
+
+if word in meme_dict.keys():
+    print(meme_dict[word])
+else:
+    print("La expresión que escribiste no existe")
