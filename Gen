@@ -4,7 +4,7 @@ caracteres= "+-/*!&$#?=@abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ12345
 
 longitud= int(input("Cuantos caracteres quieres que tenga tu contraseña, se recomiendan entre 7-13 caracteres: "))
 
-contrasena=[]
+contrasena=""
 
 for i in range(longitud):
     c = random.choice(caracteres)
