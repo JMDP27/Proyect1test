@@ -40,7 +40,11 @@ async def spam(ctx, times: int, content='repeating...'):
         await ctx.send(content)
 
 @bot.command()
+async def moneda(ctx):
+    await ctx.send(random.choice(["Cara", "Cruz"]))
+
+@bot.command()
 async def heh(ctx, count_heh = 5):
     await ctx.send("he" * count_heh)
 
-bot.run("ur token")
+bot.run("MTE2NTM1ODk5MjYyMTU3MjA5Ng.Gh4kMv.X_vN7cJILt0F5KUWtoKWzP8RKR2dYcRtXKRZP8")
