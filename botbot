@@ -47,4 +47,4 @@ async def moneda(ctx):
 async def heh(ctx, count_heh = 5):
     await ctx.send("he" * count_heh)
 
-bot.run("MTE2NTM1ODk5MjYyMTU3MjA5Ng.Gh4kMv.X_vN7cJILt0F5KUWtoKWzP8RKR2dYcRtXKRZP8")
+bot.run("ur token")
