@@ -1,5 +1,7 @@
 import discord
 import random
+import os
+import requests
 from discord.ext import commands
 
 intents = discord.Intents.default()
@@ -10,6 +12,41 @@ bot = commands.Bot(command_prefix='$', intents=intents)
 @bot.event
 async def on_ready():
     print(f'We have logged in as {bot.user}')
+
+def get_duck_image_url():    
+    url = 'https://random-d.uk/api/random'
+    res = requests.get(url)
+    data = res.json()
+    return data['url']
+
+
+@bot.command('duck')
+async def pato(ctx):
+    '''Una vez que llamamos al comando duck, 
+    el programa llama a la función get_duck_image_url'''
+    image_url = get_duck_image_url()
+    await ctx.send(image_url)
+
+def imagen_zorro():    
+    url = 'https://randomfox.ca/floof/'
+    res = requests.get(url)
+    data = res.json()
+    return data["link"]
+
+
+@bot.command('')
+async def zorro(ctx):
+    image_url = imagen_zorro()
+    await ctx.send(image_url)
+
+
+@bot.command()
+async def mem(ctx):
+    listmeme = (os.listdir('Images'))
+    img_name = random.choice(listmeme)
+    with open(f"Images/{img_name}", "rb") as f:
+        picture = discord.File(f)
+    await ctx.send(file=picture)
 
 @bot.command()
 async def joined(ctx, member: discord.Member):
